@@ -19,9 +19,7 @@ class FluxAppender : AppenderBase<ILoggingEvent>(), ApplicationContextAware {
     }
 
     override fun setApplicationContext(applicationContext: ApplicationContext) {
-        if (applicationContext.autowireCapableBeanFactory.getBean("fluxLogger") != null) {
-            fluxLogger = applicationContext.autowireCapableBeanFactory.getBean("fluxLogger") as FluxLogger
-        }
+        fluxLogger = applicationContext.autowireCapableBeanFactory.getBean("fluxLogger") as FluxLogger
     }
 
 }

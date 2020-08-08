@@ -11,6 +11,12 @@ group = "com.kforemny"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
+tasks.bootJar {
+	archiveBaseName.set("webflux-log-appender")
+	archiveVersion.set("1")
+}
+
+
 repositories {
 	mavenCentral()
 }
